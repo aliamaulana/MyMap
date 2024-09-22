@@ -13,7 +13,17 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
+  <!-- Dropdown for basemap selection -->
+  <ion-item>
+    <ion-label>Basemap</ion-label>
+    <ion-select (ionChange)="onBasemapChange($event)" placeholder="Select Basemap">
+      <ion-select-option value="topo-vector">Topographic</ion-select-option>
+      <ion-select-option value="streets-vector">Streets</ion-select-option>
+      <ion-select-option value="satellite">Satellite</ion-select-option>
+      <ion-select-option value="hybrid">Hybrid</ion-select-option>
+    </ion-select>
+  </ion-item>
 
+  <div id="container">
   </div>
 </ion-content>
